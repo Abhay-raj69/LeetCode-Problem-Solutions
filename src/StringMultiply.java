@@ -15,9 +15,10 @@ public class StringMultiply {
     static String multiply(String num1,String num2){
         int ans1=multiplyString1(num1);
         int ans2=multiplyString2(num2);
-        long finAns= (long) ans1 *ans2;
+//        long finAns= (long) ans1 *ans2;
+        BigInteger finAns=new BigInteger(String.valueOf(ans1*ans2));
+        System.out.println(finAns);
         String str=finAns+"";
-        BigInteger str1=new BigInteger(str);
         return str;
     }
     static int multiplyString1(String num1){
